@@ -1,0 +1,345 @@
+@charset "UTF-8";
+/* CSS Document */
+
+input[type=submit] {cursor:pointer; border-radius:6px;}
+
+@media only screen and (min-width:0px)
+{
+	/* HEADER */
+	header {width:100%; height:100px; background:url(../images/backgroundTileLg.png) repeat; position:relative; box-shadow:0px 0px 25px #333333 inset; overflow:hidden;} 
+	#LINE_TOP, #LINE_BOTTOM, #YELLOWER {width:100%; height:50px; background-color:rgba(0,0,0,0.2); position:absolute; top:0px;}
+	#LINE_BOTTOM {top:auto; bottom:0px;}
+	#YELLOWER {height:100%; background:rgb(229,200,0) url(../images/backgroundTileLg.png) repeat; opacity:0.2;}
+	header>img {position:absolute; left:50%; margin-left:-350px; top:50%; margin-top:-100px;}
+	header h1 {position:absolute; left:calc(100% - 252px); top:-70px; z-index:9997; font-family:'Teko', Arial, Helvetica, sans-serif; font-weight:700; font-size:5em; color:#FFFFFF; text-shadow:0px 0px 6px #000000;}
+	header #MENU, header #BUY {width:70px; height:70px; padding:0px; background-color:#333333; font-size:0.85em; position:fixed; left:0px; top:0px; z-index:9998; text-align:center; transition:padding 0.3s; -webkit-transition:padding 0.3s;}
+	header #BUY {width:auto; left:auto; padding:10px 25px; right:0px; background-color:rgba(0,0,0,0.25); color:#FFFFFF; font-size:2.5em; border-radius:0 0 0 22px; -webkit-transition:background-color 0.3s; transition:background-color 0.3s; border:1px solid #FFFFFF; border-top:none; border-right:none; overflow:hidden;}
+	header #BUY>img {float:left;}
+	header #BUY:hover {background-color:rgba(0,0,0,0.5);}
+	header #MENU.open {padding-bottom:8px;}
+	header #MENU>span {position:relative; top:-5px; color:#FEFEFE; letter-spacing:0.28em; display:block; padding-left:5px;}
+	header #MENU>div {width:60%; height:1px; margin:6px auto 0 auto; background-color:#FEFEFE; transition:transform 0.2s; -webkit-transition:transform 0.2s;}
+	header #MENU.open>div {transition:transform 0.3s; -webkit-transition:transform 0.3s; width:50%;}
+	header #MENU>div:first-of-type {margin-top:-5px;}
+	header #MENU>span.hover {color:#A3EA8D;}
+	header #MENU>div.hover {background-color:#A3EA8D;}
+	header #MENU>div#LINE2.hover {}
+	header #MENU.open>span {top:-17px;}
+	header #MENU.open>div#LINE1 {transform:rotate(45deg); margin:0 auto;}
+	header #MENU.open>div#LINE2 {transform:rotate(45deg); margin:0 auto;}
+	header #MENU.open>div#LINE3 {transform:rotate(-45deg); margin:0 auto;}
+	header #MENU.open>div#LINE4 {transform:rotate(-45deg); margin:0 auto;}
+	
+	header nav {width:80%; height:0px; padding:20px 10%; background-color:rgba(61,118,0,0); position:fixed; top:-40px; left:0px; z-index:9998; overflow:hidden;}
+	header nav ul {width:72%; height:auto; list-style:none; margin:30px auto 0 auto;}
+	header nav ul li {width:100%; text-align:left; margin-bottom:15px;}
+	header nav ul li button {width:100%; height:6.5vh; padding:3px 5px 9px 5px; font-size:4.5vh; display:block; font-family:'Teko', sans-serif; color:rgba(255,255,255,0.0); background:rgba(20,20,20,0.8) url(../images/backgroundTileLg.png) repeat; text-decoration:none; border-radius:10px; transition:background-color 0.2s, font-size 0.3s; -webkit-transition:background-color 0.2s, font-size 0.3s;}
+	header nav.open ul li button {color:rgba(255,255,255,1.0);}
+	header nav ul li button:hover {background-color:rgba(20,20,20,1); font-size:4.9vh;}
+	
+	#T_HEADER {width:100%; height:0px; text-align:center; background:rgba(229,200,0,1) url(../images/backgroundTileLg.png) repeat; position:fixed; top:0px; z-index:9998; transition:height 0.2s, opacity 0.3s; -webkit-transition:height 0.2s, opacity 0.3s; opacity:0;}
+	#T_HEADER>img {top:-15px; position:absolute; right:10px;}
+	#T_HEADER>img+img {display:none;}
+	#T_HEADER.fixed {height:70px; opacity:1; box-shadow:0px 0px 20px #333333;}
+	
+	
+	/* SLIDER */
+	#SLIDESHOW, #STATIC {width:100%; height:100px; overflow:hidden; position:absolute; top:0px; left:0px; z-index:-1;}
+	#SLIDESHOW>img, #STATIC>img {width:110%; height:auto; position:absolute; top:-11vw; left:0px; transition:opacity 0.3s; -webkit-transition:opacity 0.3s;}
+	#SLIDESHOW>img.hidden {opacity:0;}
+	
+	
+	/* MAIN */
+	main {width:100%; height:auto; margin:0 auto; background-color:rgba(255,255,255,0.7); box-shadow:0px 0px 25px #333333; line-height:1.5; text-align:center;}
+	main #WRAPPER {width:100%; height:auto; min-height:800px; margin:0 auto; background-color:#FFFFFF; padding:50px 20px 100vh 20px; box-sizing:border-box;}
+	main #WRAPPER h2, main #WRAPPER .left h2 {font-size:2.3em; line-height:0.8; text-align:center; font-family:'Teko', sans-serif; padding-top:100px; color:#503E26;}
+	main #WRAPPER .left h2 {text-align:left;}
+	main #WRAPPER>h2:first-of-type {padding-top:0px; font-size:3em; text-transform:uppercase;}
+	main #WRAPPER nav {width:100%; height:auto; position:relative; top:-70px;}
+	main #WRAPPER nav button {width:24.625%; height:70px; background-color:rgba(0,0,0,0.3); margin:0px 0.25%; overflow:hidden; position:relative;}
+	main #WRAPPER nav button span {width:380px; height:80px; position:absolute; left:-380px; top:0px; z-index:0; background:url(../images/buttonSlide.png) no-repeat 0px 0px;}
+	main #WRAPPER nav button span.hover {left:0px;}
+	main #WRAPPER nav button:first-of-type {margin-left:0px;}
+	main #WRAPPER nav button:last-of-type {margin-right:0px;}
+	
+	#GRID {width:100%; height:auto; overflow:hidden;}
+	#GRID>div {overflow:hidden; position:relative; margin-bottom:15px; box-sizing:border-box; background:url(../images/backgroundTile.png) repeat; background-position:0px 0px; transition:background-position 0.7s; -webkit-transition:background-position 0.7s;}
+	#GRID>div:hover {background-position:0px 70px;}
+	#GRID>div.twentyFive {width:100%; height:200px;}
+	#GRID>div.fifty {width:100%; height:200px;}
+	#GRID>div>img {}
+	#GRID>div>img.wider {width:100%; left:0px; top:0px;}
+	#GRID>div>img.taller {height:100%; left:0px; top:0px;}
+	#GRID>div>img.wider50 {position:absolute; width:calc(100% + 100px); left:-50px; top:-50px;}
+	#GRID>div>img.wider100 {position:absolute; width:calc(100% + 100px); left:-100px; top:-100px;}
+	#GRID .floatR {float:none;}
+	#GRID .floatL {float:none;}
+	#GRID .roller>div.yellow, #GRID .roller>div.black {width:100%; height:100%; transition:background-color 0.3s, text-shadow 0.3s; -webkit-transition:background-color 0.3s, text-shadow 0.3s; background-color:rgba(209,180,0,1); cursor:pointer; font-family:'Teko', sans-serif; color:#FFFFFF; padding:0 10px; text-align:left; font-size:240%; box-sizing:border-box; text-shadow:0px 0px 0px #333333;}
+	#GRID .roller>div.black {background-color:rgba(90,90,90,1);}
+	#GRID .roller>div.yellow:hover {background-color:rgba(229,200,0,0.7); text-shadow:0px 0px 10px #333333;}
+	#GRID .roller>div.black:hover {background-color:rgba(90,90,90,0.7); text-shadow:0px 0px 10px #333333;}
+	
+	#GRID>div span {display:block; font-family:'Montserrat', Helvetica, Arial, sans-serif; font-size:16px; margin-top:-30px; opacity:0; transition:margin-top 0.3s, opacity 0.3s; -webkit-transition:margin-top 0.3s, opacity 0.3s; line-height:1.2;}
+	#GRID>div span+span {position:absolute; bottom:10px; right:10px;}
+	#GRID>div:hover span {margin-top:-10px; opacity:1;}
+	
+	
+	/* FOOTER */
+	footer {width:80%; height:110px; padding:10px 10%; background-color:rgba(20,20,20,0.65);}
+	footer #COPY {color:#FFFFFF; position:absolute; right:10%; bottom:10px;}
+	
+	
+	/* HEIGHT & WIDTH FOR GRID */
+	
+	
+	/* BACKGROUNDS */
+	
+	
+	/* FONT COLORS */
+	
+	
+	/* FIX UPS */
+}
+
+
+@media only screen and (min-width:965px)
+{
+	/* HEADER */
+	header {width:100%; height:400px; background:url(../images/backgroundTileLg.png) repeat; position:relative; box-shadow:0px 0px 25px #333333 inset; overflow:visible;} 
+	#LINE_TOP, #LINE_BOTTOM {width:100%; height:50px; background-color:rgba(0,0,0,0.2); position:absolute; top:0px;}
+	#LINE_BOTTOM {top:auto; bottom:0px;}
+	header>img {position:absolute; left:50%; margin-left:-350px; top:50%; margin-top:-100px;}
+	header h1 {position:absolute; left:calc(50% - 126px); top:270px; z-index:9997; font-family:'Teko', Arial, Helvetica, sans-serif; font-weight:700; font-size:5em; color:#FFFFFF; text-shadow:0px 0px 6px #000000;}
+	header #MENU {width:100px; height:100px; padding:0px; background-color:#333333; font-size:1.2em; position:fixed; left:0px; top:0px; z-index:9999; text-align:center; transition:padding 0.3s; -webkit-transition:padding 0.3s;}
+	header #MENU.open {padding-bottom:8px;}
+	header #MENU>span {position:relative; top:-5px; color:#FEFEFE; letter-spacing:0.28em; display:block; padding-left:5px;}
+	header #MENU>div {width:60%; height:1px; margin:6px auto 0 auto; background-color:#FEFEFE; transition:transform 0.2s; -webkit-transition:transform 0.2s;}
+	header #MENU.open>div {transition:transform 0.3s; -webkit-transition:transform 0.3s; width:50%;}
+	header #MENU>div:first-of-type {margin-top:-5px;}
+	header #MENU>span.hover {color:#A3EA8D;}
+	header #MENU>div.hover {background-color:#A3EA8D;}
+	header #MENU>div#LINE2.hover {}
+	header #MENU.open>span {top:-17px;}
+	header #MENU.open>div#LINE1 {transform:rotate(45deg); margin:0 auto;}
+	header #MENU.open>div#LINE2 {transform:rotate(45deg); margin:0 auto;}
+	header #MENU.open>div#LINE3 {transform:rotate(-45deg); margin:0 auto;}
+	header #MENU.open>div#LINE4 {transform:rotate(-45deg); margin:0 auto;}
+	
+	header nav {width:80%; height:0px; padding:20px 10%; background-color:rgba(61,118,0,0); position:fixed; top:-40px; left:0px; z-index:9998; overflow:hidden;}
+	header nav ul {width:67%; height:auto; list-style:none; margin:30px auto 0 auto;}
+	header nav ul li {width:100%; text-align:left; margin-bottom:15px;}
+	header nav ul li button {width:100%; height:6.5vh; padding:3px 5px 9px 5px; font-size:4.5vh; display:block; font-family:'Teko', sans-serif; color:rgba(255,255,255,0.0); background:rgba(20,20,20,0.8) url(../images/backgroundTileLg.png) repeat; text-decoration:none; border-radius:10px; transition:background-color 0.2s, font-size 0.3s; -webkit-transition:background-color 0.2s, font-size 0.3s;}
+	header nav.open {height:100vh; padding:0px 10%; top:0px; background-color:rgba(255,255,100,0.8);}
+	header nav.open ul li button {color:rgba(255,255,255,1.0);}
+	header nav ul li button:hover {background-color:rgba(20,20,20,1); font-size:4.9vh;}
+	
+	#T_HEADER {width:100%; height:0px; text-align:center; background:rgba(229,200,0,1) url(../images/backgroundTileLg.png) repeat; position:fixed; top:0px; z-index:9998; transition:height 0.2s, opacity 0.3s; -webkit-transition:height 0.2s, opacity 0.3s; opacity:0;}
+	#T_HEADER>img {display:none;}
+	#T_HEADER>img+img {top:-5px; display:inline; position:relative; right:auto;}
+	#T_HEADER.fixed {height:100px; opacity:1; box-shadow:0px 0px 20px #333333;}
+	
+	
+	/* SLIDER */
+	#SLIDESHOW, #STATIC {width:100%; height:400px; overflow:hidden; position:absolute; top:0px; left:0px; z-index:-1;}
+	#SLIDESHOW>img, #STATIC>img {width:100%; height:auto; position:absolute; top:-11vw; left:0px; transition:opacity 0.3s; -webkit-transition:opacity 0.3s;}
+	#SLIDESHOW>img.hidden {opacity:0;}
+	
+	
+	/* MAIN */
+	main {width:100%; height:auto; margin:0 auto; background-color:rgba(255,255,255,0.7); box-shadow:0px 0px 25px #333333; line-height:1.5; text-align:center;}
+	main #WRAPPER {width:100%; height:auto; margin:0 auto; background-color:#FFFFFF; padding:100px 130px 100vh 130px; box-sizing:border-box;}
+	main #WRAPPER h2 {font-size:2.3em; line-height:1.5; text-align:center; font-family:'Teko', sans-serif; padding-top:100px;}
+	main #WRAPPER>h2:first-of-type {padding-top:0px; font-size:5em;}
+	main #WRAPPER nav {width:100%; height:auto; position:relative; top:-70px;}
+	main #WRAPPER nav button {width:24.625%; height:70px; background-color:rgba(0,0,0,0.3); margin:0px 0.25%; overflow:hidden; position:relative;}
+	main #WRAPPER nav button span {width:380px; height:80px; position:absolute; left:-380px; top:0px; z-index:0; background:url(../images/buttonSlide.png) no-repeat 0px 0px;}
+	main #WRAPPER nav button span.hover {left:0px;}
+	main #WRAPPER nav button:first-of-type {margin-left:0px;}
+	main #WRAPPER nav button:last-of-type {margin-right:0px;}
+	
+	#GRID {width:100%; height:auto; overflow:hidden;}
+	#GRID>div {overflow:hidden; position:relative; box-sizing:border-box; margin:5px; background:url(../images/backgroundTile.png) repeat; background-position:0px 0px; transition:background-position 0.7s; -webkit-transition:background-position 0.7s;}
+	#GRID>div:hover {background-position:0px 70px;}
+	#GRID>div.twentyFive {width:calc(100% - 479px); height:200px;}
+	#GRID>div.fifty {width:459px; height:410px;}
+	#GRID>div>img {}
+	#GRID>div>img.wider {width:100%; left:0px; top:0px;}
+	#GRID>div>img.taller {height:100%; left:0px; top:0px;}
+	#GRID>div>img.wider50 {position:absolute; width:calc(100% + 100px); left:-50px; top:-50px;}
+	#GRID>div>img.wider100 {position:absolute; width:calc(100% + 100px); left:-100px; top:-100px;}
+	#GRID .floatR {float:right;}
+	#GRID .floatL {float:left;}
+	#GRID .roller>div.yellow, #GRID .roller>div.black {width:100%; height:100%; transition:background-color 0.3s, text-shadow 0.3s; -webkit-transition:background-color 0.3s, text-shadow 0.3s; background-color:rgba(209,180,0,1); cursor:pointer; font-family:'Teko', sans-serif; color:#FFFFFF; padding:0 10px; text-align:left; font-size:240%; box-sizing:border-box; text-shadow:0px 0px 0px #333333;}
+	#GRID .roller>div.black {background-color:rgba(90,90,90,1);}
+	#GRID .roller>div.yellow:hover {background-color:rgba(229,200,0,0.7); text-shadow:0px 0px 10px #333333;}
+	#GRID .roller>div.black:hover {background-color:rgba(90,90,90,0.7); text-shadow:0px 0px 10px #333333;}
+	
+	#GRID>div span {display:block; font-family:'Montserrat', Helvetica, Arial, sans-serif; font-size:16px; margin-top:-30px; opacity:0; transition:margin-top 0.3s, opacity 0.3s; -webkit-transition:margin-top 0.3s, opacity 0.3s; line-height:1.2;}
+	#GRID>div span+span {position:absolute; bottom:10px; right:10px;}
+	#GRID>div:hover span {margin-top:-10px; opacity:1;}
+	
+	
+	/* FOOTER */
+	footer {width:80%; height:110px; padding:10px 10%; background-color:rgba(20,20,20,0.65);}
+	footer #COPY {color:#FFFFFF; position:absolute; right:10%; bottom:10px;}
+	
+	
+	/* HEIGHT & WIDTH FOR GRID */
+	
+	
+	/* BACKGROUNDS */
+	
+	
+	/* FONT COLORS */
+	
+	
+	/* FIX UPS */
+
+}
+
+
+@media only screen and (min-width:1200px)
+{
+	/* HEADER */
+	header {width:100%; height:400px; background:url(../images/backgroundTileLg.png) repeat; position:relative; box-shadow:0px 0px 25px #333333 inset; transition:background-color 0.2s; -webkit-transition:transform 0.2s;} 
+	#LINE_TOP, #LINE_BOTTOM {width:100%; height:50px; background-color:rgba(0,0,0,0.2); position:absolute; top:0px;}
+	#LINE_BOTTOM {top:auto; bottom:0px;}
+	header>img {position:absolute; left:50%; margin-left:-350px; top:50%; margin-top:-100px;}
+	header h1 {position:absolute; left:calc(50% - 126px); top:270px; z-index:9997; font-family:'Teko', Arial, Helvetica, sans-serif; font-weight:700; font-size:5em; color:#FFFFFF; text-shadow:0px 0px 6px #000000;}
+	header #MENU {width:100px; height:100px; padding:0px; background-color:#333333; font-size:1.2em; position:fixed; left:0px; top:0px; z-index:9999; text-align:center; transition:padding 0.3s; -webkit-transition:padding 0.3s;}
+	header #MENU.open {padding-bottom:8px;}
+	header #MENU>span {position:relative; top:-5px; color:#FEFEFE; letter-spacing:0.28em; display:block; padding-left:5px;}
+	header #MENU>div {width:60%; height:1px; margin:6px auto 0 auto; background-color:#FEFEFE; transition:transform 0.2s; -webkit-transition:transform 0.2s;}
+	header #MENU.open>div {transition:transform 0.3s; -webkit-transition:transform 0.3s; width:50%;}
+	header #MENU>div:first-of-type {margin-top:-5px;}
+	header #MENU>span.hover {color:#A3EA8D;}
+	header #MENU>div.hover {background-color:#A3EA8D;}
+	header #MENU>div#LINE2.hover {}
+	header #MENU.open>span {top:-17px;}
+	header #MENU.open>div#LINE1 {transform:rotate(45deg); margin:0 auto;}
+	header #MENU.open>div#LINE2 {transform:rotate(45deg); margin:0 auto;}
+	header #MENU.open>div#LINE3 {transform:rotate(-45deg); margin:0 auto;}
+	header #MENU.open>div#LINE4 {transform:rotate(-45deg); margin:0 auto;}
+	
+	header nav {width:80%; height:0px; padding:20px 10%; background-color:rgba(61,118,0,0); position:fixed; top:-40px; left:0px; z-index:9998; overflow:hidden;}
+	header nav ul {width:60%; height:auto; list-style:none; margin:30px auto 0 auto;}
+	header nav ul li {width:100%; text-align:left; margin-bottom:15px;}
+	header nav ul li button {width:100%; height:6.5vh; padding:3px 5px 9px 5px; font-size:4.5vh; display:block; font-family:'Teko', sans-serif; color:rgba(255,255,255,0.0); background:rgba(20,20,20,0.8) url(../images/backgroundTileLg.png) repeat; text-decoration:none; border-radius:10px; transition:background-color 0.2s, font-size 0.3s; -webkit-transition:background-color 0.2s, font-size 0.3s;}
+	header nav.open {height:100vh; padding:0px 10%; top:0px; background-color:rgba(255,255,100,0.8);}
+	header nav.open ul li button {color:rgba(255,255,255,1.0);}
+	header nav ul li button:hover {background-color:rgba(20,20,20,1); font-size:4.9vh;}
+	
+	#T_HEADER {width:100%; height:0px; text-align:center; background:rgba(229,200,0,1) url(../images/backgroundTileLg.png) repeat; position:fixed; top:0px; z-index:9998; transition:height 0.2s, opacity 0.3s; -webkit-transition:height 0.2s, opacity 0.3s; opacity:0;}
+	#T_HEADER>img {top:20px;}
+	#T_HEADER.fixed {height:100px; opacity:1; box-shadow:0px 0px 20px #333333;}
+	#T_HEADER>a {position:absolute; top:20px; left:110px; font-size:2em; color:#333333; font-family:'Teko'; padding:10px 10px 8px 10px; background-color:rgba(0,0,0,0.15); text-decoration:none; line-height:0.8; border-radius: 7px;}
+	
+	
+	/* SLIDER */
+	#SLIDESHOW, #STATIC {width:100%; height:400px; overflow:hidden; position:absolute; top:0px; left:0px; z-index:-1;}
+	#SLIDESHOW>img, #STATIC>img {width:100%; height:auto; position:absolute; top:calc(-11vw - 100px); left:0px; transition:opacity 0.3s; -webkit-transition:opacity 0.3s;}
+	#STATIC>img {top:0px;}
+	#SLIDESHOW>img.hidden {opacity:0;}
+	
+	
+	/* MAIN */
+	main {width:100%; height:auto; margin:0 auto; background-color:rgba(255,255,255,0.7); box-shadow:0px 0px 25px #333333; line-height:1.5; text-align:center;}
+	main #WRAPPER {width:1200px; height:auto; margin:0 auto; background-color:#FFFFFF; padding:100px 130px 100px 130px; box-sizing:border-box;}
+	main #WRAPPER h2 {font-size:2.3em; text-align:center; font-family:'Teko', sans-serif; padding-top:100px;}
+	main #WRAPPER>h2:first-of-type {padding-top:0px; font-size:5em;}
+	main #WRAPPER nav {width:100%; height:auto; position:relative; top:-70px;}
+	main #WRAPPER nav button {width:24.625%; height:70px; background-color:rgba(0,0,0,0.3); margin:0px 0.25%; overflow:hidden; position:relative;}
+	main #WRAPPER nav button span {width:380px; height:80px; position:absolute; left:-380px; top:0px; z-index:0; background:url(../images/buttonSlide.png) no-repeat 0px 0px;}
+	main #WRAPPER nav button span.hover {left:0px;}
+	main #WRAPPER nav button:first-of-type {margin-left:0px;}
+	main #WRAPPER nav button:last-of-type {margin-right:0px;}
+	/*main #WRAPPER p+ul {margin-top:-30px;}*/
+	
+	#GRID {width:100%; height:auto; overflow:hidden;}
+	#GRID>div {overflow:hidden; position:relative; box-sizing:border-box; margin:5px; background:url(../images/backgroundTile.png) repeat; background-position:0px 0px; transition:background-position 0.7s; -webkit-transition:background-position 0.7s;}
+	#GRID>div:hover {background-position:0px 70px;}
+	#GRID>div.twentyFive {width:224px; height:200px;}
+	#GRID>div.fifty {width:459px; height:410px;}
+	#GRID>div>img {}
+	#GRID>div>img.wider {width:100%; left:0px; top:0px;}
+	#GRID>div>img.taller {height:100%; left:0px; top:0px;}
+	#GRID>div>img.wider50 {position:absolute; width:calc(100% + 100px); left:-50px; top:-50px;}
+	#GRID>div>img.wider100 {position:absolute; width:calc(100% + 100px); left:-100px; top:-100px;}
+	#GRID .floatR {float:right;}
+	#GRID .floatL {float:left;}
+	#GRID .roller>div.yellow, #GRID .roller>div.black {width:100%; height:100%; transition:background-color 0.3s, text-shadow 0.3s; -webkit-transition:background-color 0.3s, text-shadow 0.3s; background-color:rgba(209,180,0,1), text-shadow 0.3s; cursor:pointer; font-family:'Teko', sans-serif; color:#FFFFFF; padding:0 10px; text-align:left; font-size:240%; box-sizing:border-box; text-shadow:0px 0px 0px #333333;}
+	#GRID .roller>div.black {background-color:rgba(90,90,90,1);}
+	#GRID .roller>div.yellow:hover {background-color:rgba(229,200,0,0.7); text-shadow:0px 0px 10px #333333;}
+	#GRID .roller>div.black:hover {background-color:rgba(90,90,90,0.7); text-shadow:0px 0px 10px #333333;}
+	
+	#GRID>div span {display:block; font-family:'Montserrat', Helvetica, Arial, sans-serif; font-size:16px; margin-top:-30px; opacity:0; transition:margin-top 0.3s, opacity 0.3s; -webkit-transition:margin-top 0.3s, opacity 0.3s; line-height:1.2;}
+	#GRID>div span+span {position:absolute; bottom:10px; right:10px;}
+	#GRID>div:hover span {margin-top:-10px; opacity:1;}
+	
+	
+	/* MAP */
+	#MAP {position:relative;}
+	#MAP>img {width:100%;}
+	#MAP a, #MAP p {position:absolute; width:50px; height:50px; margin-bottom:0; display:inline-block; transition:width 0.2s, height 0.2s, margin-left 0.2s; -webkit-transition:width 0.2s, height 0.2s, margin-left 0.2s;}
+	#MAP p {padding-bottom:10px;}
+	#MAP a>img {width:80%;}
+	#MAP a:hover {width:70px; height:70px; margin-left:-10px; z-index:9999;}
+	#MAP a>span {width:120px; padding:5px 10px; line-height:0.9; font-family:'Dosis', Helvetica, Arial, sans-serif; display:block; position:absolute; top:-46px; left:50%; z-index:9999; color:#333333; text-decoration:none; margin:0 0 0 -70px; text-align:center; opacity:0; transition:opacity 0.3s ease-in; -webkit-transition:opacity 0.3s ease-in; font-weight:bold; pointer-events:none; background-color:rgba(255,255,255,0.85); border-radius:6px;}
+	#MAP p>span {display:none;}
+	#MAP a:hover>span {opacity:1;}
+	#MINDEN {bottom:192px; left:600px;}
+	#PLATTSMOUTH {bottom:240px; left:810px;}
+	#MEMPHIS {bottom:240px; left:750px;}
+	#FRANKLIN {bottom:150px; left:650px;}
+	#ELK_CITY {bottom:270px; left:720px;}
+	#NORMAN {bottom:200px; left:640px;}
+	
+	
+	/* LOCATIONS */
+	.location #WRAPPER>h2+div>img {width:200px; margin-bottom:0; float:left;}
+	.location #WRAPPER button {min-width:31%; height:auto; padding:10px; margin:0 1%; border-radius:8px; font-size:1.1em; background-color:rgb(190,65,54); color:#FFFFFF; -webkit-transition:background-color 0.3s, color 0.3s; transition:background-color 0.3s, color 0.3s; clear:both;}
+	.location #WRAPPER button:hover {background-color:rgb(179,149,0); color:#FFFFFF;}
+	.location #WRAPPER div>p {text-align:left;}
+	.location #WRAPPER>div:first-of-type {display:table; margin-bottom:40px;}
+	.location #WRAPPER>div:first-of-type>* {display:table-cell; vertical-align:middle;}
+	
+	
+	/* PAGES */
+	.page #WRAPPER>h2+div>img, .page #WRAPPER>div>img {width:200px; margin:0 30px 10px 0; float:left;}
+	.page #WRAPPER div {margin-bottom:70px;}
+	.page #WRAPPER div>p {text-align:left;}
+	.page #WRAPPER h3 {text-align:left; color:#FFFFFF; padding:4px 10px; background-color:#999999; margin-bottom:10px;}
+	.page #WRAPPER button {min-width:31%; height:auto; padding:10px; margin:0; border-radius:8px; font-size:1.1em; background-color:rgb(190,65,54); color:#FFFFFF; -webkit-transition:background-color 0.3s, color 0.3s; transition:background-color 0.3s, color 0.3s; clear:both; display:block;}
+	.page #WRAPPER button:hover {background-color:rgb(179,149,0); color:#FFFFFF;}
+	
+	
+	/* ASIDE */
+	aside {font-family: 'Dosis', sans-serif;  width:84%; min-height:310px; padding:40px 8%; overflow:hidden; line-height:1.5; font-weight:normal; border-top: 5px dashed #FFF; box-shadow:0px 0px 10px #333333 inset; background:rgb(70,70,70) url(../images/backgroundG.png) no-repeat 112% -50px;}
+	aside>div {width:49%; float:left; color:#DDDDDD; padding:20px; box-sizing:border-box; position:relative; text-align:right;}
+	aside>div:first-of-type, #PRODUCTS  {margin-right:2%; border-right:1px solid #777777; text-align:left;}
+	aside p {margin-bottom:0; clear:both;}
+	aside img {height:100%; width:auto; position:absolute; right:94%; top:-5px;}
+	aside form, form {width:100%; display:inline-block; margin-bottom:10px; position:relative;}
+	aside form+p {text-align:right;}
+	aside h3 {margin-bottom:15px; padding-bottom:3px;}
+	aside input, input, textarea {width:80%; height:35px; float:right; box-sizing:border-box; padding:0px 10px; margin-bottom:5px; font-size:1em; border-radius:6px; border:1px solid #333333;}
+	textarea {height:150px;}
+	aside label, label {width:18%; height:35px; float:left; text-align:right; box-sizing:border-box; display:inline-block; padding-top:5px;}
+	
+	/* FOOTER */
+	footer {width:80%; height:110px; padding:10px 10%; background-color:rgba(20,20,20,0.65);}
+	footer #COPY {color:#FFFFFF; position:absolute; right:10%; bottom:10px;}
+	
+	
+	/* HEIGHT & WIDTH FOR GRID */
+	
+	
+	/* BACKGROUNDS */
+	
+	
+	/* FONT COLORS */
+	
+	
+	/* FIX UPS */
+
+}
